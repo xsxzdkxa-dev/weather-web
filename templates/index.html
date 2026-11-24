@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form method="POST">
+            <input type="text" name="city" placeholder="Введи місто..." required>
+            <button type="submit">Показати погоду</button>
+        </form>
+        {% if weather %}
+            <div class="weather-card">
+                <h2>{{ weather.city }}</h2>
+                <p>Температура: {{ weather.temp }} °C</p>
+                <p>Відчувається як: {{ weather.feels_like }} °C</p>
+                <p>Вологість: {{ weather.humidity }}%</p>
+                <p>Вітер: {{ weather.wind }} км/год</p>
+            </div>
+        {% endif %}
+         {% if error %}<p class="error">{{ error }}</p>{% endif %}
+    </body>
+</html>

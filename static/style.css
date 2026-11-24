@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111827;
+    color: #f8fafc;
+    flex-direction: column;
+    background-image: url("weatherf.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+form{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input{
+    background-color: #1e293b;
+    color: #f8fafc;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+}
+
+button{
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background-color: #2563eb;
+}
+
+button:hover{
+    background-color: #1d4ed8;
+}
+
+.weather-card{
+    background-color: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.weather-card p { margin: 8px 0;}
+
+.error{
+    color: #f87171;
+    margin-top: 10px;
+}
