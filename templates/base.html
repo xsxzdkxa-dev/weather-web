@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}Погода{% endblock %}</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="icon" type="image/png" href"{{ url_for('static', filename='weatherpulse-icon.png')}}">
+    </head>
+    <body>
+        <header class="navbar"><a href="{{ url_for('index') }}" class="brand">
+            <img src="{{ url_for('static', filename='weatherpulse-logo-dark.png') }}" alt="WeatherPulse" class="brand-logo">
+        </a>
+            <nav>
+                <a href="{{ url_for('index') }}">Погода</a>
+                <a href="{{ url_for('about') }}">Про проєкт</a>
+            </nav>
+        </header>
+            <main class="main-content">
+                {% block content %}{% endblock %}
+            </main>
+
+        <footer class="footer">
+            <p>WeatherPulse · <a href="https://github.com/xsxzdkxa-dev/weather-web" target="_blank">GitHub</a></p>
+        </footer>
+
+    </body>
+</html>

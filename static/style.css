@@ -7,7 +7,7 @@
 body{
     min-height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     background: radial-gradient(circle at top left, #1e3a8a, #0f172a 70% );
     min-height: 100vh;
@@ -58,4 +58,77 @@ button:hover{
 .error{
     color: #f87171;
     margin-top: 10px;
+}
+
+.navbar{
+    width: 100%;
+    padding: 16px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navbar nav{
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a{
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover{
+  color:#38bdf8;
+}
+
+.main-content{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px 16px;
+}
+
+.about-card{
+    background-color: rgba(15, 23, 42, 0.82);
+    backdrop-filter: blur(8px);
+    padding: 24px 28px;
+    border-radius: 14px;
+    border: 1px solid #334155; max-width: 480px;
+    width: 100%;
+}
+.about-card p {
+    margin: 8px 0;
+}
+
+.footer{
+    width: 100%;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer a:hover{
+    color:#f8fafc;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-logo{
+    height: 36px;
+    width: auto;
+    border-radius: 6px;
 }
